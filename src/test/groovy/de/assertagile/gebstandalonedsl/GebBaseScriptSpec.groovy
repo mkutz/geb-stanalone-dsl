@@ -15,10 +15,8 @@ class GebBaseScriptSpec extends Specification {
         shell.evaluate('''
             browser org.openqa.selenium.firefox.FirefoxDriver
             baseUrl "http://assertagile.de"
-            drive {
-                go("/")
-                assert $("a").find { it.attr("href").startsWith("https://github.com") }
-            }
+            go("/")
+            assert $("a").find { it.attr("href").startsWith("https://github.com") }
             '''.stripIndent()) == null
     }
 
