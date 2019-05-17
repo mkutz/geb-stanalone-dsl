@@ -1,0 +1,10 @@
+#!/usr/bin/env groovy
+@Grab('de.assertagile:geb-standalone-dsl:1.0')
+@groovy.transform.BaseScript(GebBaseScript)
+import de.assertagile.gebstandalonedsl.GebBaseScript
+import org.openqa.selenium.chrome.ChromeDriver
+
+browser ChromeDriver
+drive {
+    go "http://google.com"
+}
